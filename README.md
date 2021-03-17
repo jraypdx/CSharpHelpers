@@ -19,6 +19,13 @@ DelegateCommand.cs - Object for making commands (usually button presses) that ca
 Hot to load assemblies at runtime in WPF applications, either from specified folders or from embedded assemblies.  Also how to get a stack trace for unhandled exceptions rather than the program crashing with no details.
 
 
+## Binding_Converters
+
+A few binding converters I regularly use in MVVM.  They help with things such as binding a bool when a Visibility is needed.
+
+
+
+### TODO
 
 List of things I need to remember to pull and scrub from work projects to add here:
  - Timed popup usercontrol that closes when you click out of it
