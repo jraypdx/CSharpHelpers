@@ -14,10 +14,14 @@ ViewModelBase.cs - A parent class that can be inherited by any ViewModels you ma
 DelegateCommand.cs - Object for making commands (usually button presses) that can pass in parameters
 
 
+## Runtime_Assembly_Loading
+
+Hot to load assemblies at runtime in WPF applications, either from specified folders or from embedded assemblies.  Also how to get a stack trace for unhandled exceptions rather than the program crashing with no details.
+
+
 
 List of things I need to remember to pull and scrub from work projects to add here:
  - Timed popup usercontrol that closes when you click out of it
  - Standalone exe (bundling external assemblies, icons, and files)
- - Loading external assemblies at runtime (WPF)(used if your program depends on another being installed, and there may be different versions on different computers)
  - Custom app (WPF) themes and colors by using DynamicResources and overriding styles
  - Various convertors I found helpful
