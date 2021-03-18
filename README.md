@@ -27,7 +27,9 @@ A few binding converters I regularly use in MVVM.  They help with things such as
 ## Timed_Popup_UserControl
 
 This is a custom popup UserControl overlay for displaying messages to users or getting any kind of input.  It can be customized to have any assortment of messages, buttons, textboxes, comboboxes, etc., and it can be closed by clicking outside of it.  The highlight of this control is that when calling it, you give it a time in seconds to display, and if the user has not closed it or triggered it to close (ex. by pressing a button) in that time then it hides itself.
+
 ![image](https://user-images.githubusercontent.com/44383003/111663343-f1d14000-87cd-11eb-935e-f070b5207701.png)
+
 Here is an example that can pause/play, cancel, or kill a task that is running.  Notice the countdown in the top right.  Due to WPF the countdown isn't super accurate, but is accurate enough for something like this.
 
 
