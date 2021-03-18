@@ -51,3 +51,4 @@ Here is an example that can pause/play, cancel, or kill a task that is running. 
 List of things I need to remember to pull and scrub from work projects to add here:
  - Standalone exe (bundling external assemblies, icons, and files)
  - Custom app (WPF) themes and colors by using DynamicResources and overriding styles
+ - Make a few basic timed popups and add to a new repo, maybe make a nuget package for them
