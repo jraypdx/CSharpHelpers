@@ -2,6 +2,7 @@
 I'll be adding helpful tools and tricks I find for C#, as well as templates and objects I make that I end up reusing a lot
 
 
+<p>&nbsp;</p>
 
 
 ## MVVM
@@ -14,14 +15,23 @@ ViewModelBase.cs - A parent class that can be inherited by any ViewModels you ma
 DelegateCommand.cs - Object for making commands (usually button presses) that can pass in parameters
 
 
+<p>&nbsp;</p>
+
+
 ## Runtime_Assembly_Loading
 
 Hot to load assemblies at runtime in WPF applications, either from specified folders or from embedded assemblies.  Also how to get a stack trace for unhandled exceptions rather than the program crashing with no details.
 
 
+<p>&nbsp;</p>
+
+
 ## Binding_Converters
 
 A few binding converters I regularly use in MVVM.  They help with things such as binding a bool when a Visibility is needed.
+
+
+<p>&nbsp;</p>
 
 
 ## Timed_Popup_UserControl
@@ -31,6 +41,9 @@ This is a custom popup UserControl overlay for displaying messages to users or g
 ![image](https://user-images.githubusercontent.com/44383003/111663343-f1d14000-87cd-11eb-935e-f070b5207701.png)
 
 Here is an example that can pause/play, cancel, or kill a task that is running.  Notice the countdown in the top right.  Due to WPF the countdown isn't super accurate, but is accurate enough for something like this.
+
+
+<p>&nbsp;</p>
 
 
 ### TODO
