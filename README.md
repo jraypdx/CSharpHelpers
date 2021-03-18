@@ -24,11 +24,15 @@ Hot to load assemblies at runtime in WPF applications, either from specified fol
 A few binding converters I regularly use in MVVM.  They help with things such as binding a bool when a Visibility is needed.
 
 
+## Timed_Popup_UserControl
+
+This is a custom popup UserControl overlay for displaying messages to users or getting any kind of input.  It can be customized to have any assortment of messages, buttons, textboxes, comboboxes, etc., and it can be closed by clicking outside of it.  The highlight of this control is that when calling it, you give it a time in seconds to display, and if the user has not closed it or triggered it to close (ex. by pressing a button) in that time then it hides itself.
+![image](https://user-images.githubusercontent.com/44383003/111663343-f1d14000-87cd-11eb-935e-f070b5207701.png)
+Here is an example that can pause/play, cancel, or kill a task that is running.  Notice the countdown in the top right.  Due to WPF the countdown isn't super accurate, but is accurate enough for something like this.
+
 
 ### TODO
 
 List of things I need to remember to pull and scrub from work projects to add here:
- - Timed popup usercontrol that closes when you click out of it
  - Standalone exe (bundling external assemblies, icons, and files)
  - Custom app (WPF) themes and colors by using DynamicResources and overriding styles
- - Various convertors I found helpful
