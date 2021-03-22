@@ -1,0 +1,20 @@
+﻿<Application
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="Example.App"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+		
+			<!-- Color and brush example -->
+            <Color x:Key="COLOR_Background">#FFFFFF</Color>
+			<SolidColorBrush x:Key="Background" Color="#FFFFFF" />
+			
+			<!-- Icon example -->
+			<ImageSource x:Key="menu">../Resources/menu.png</ImageSource>
+
+        </ResourceDictionary>
+
+
+    </Application.Resources>
+</Application>
