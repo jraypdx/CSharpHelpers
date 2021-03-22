@@ -46,8 +46,54 @@ Here is an example that can pause/play, cancel, or kill a task that is running. 
 <p>&nbsp;</p>
 
 
+## Standalone WPF executable
+#### AKA how to package everything in to your .exe
+
+There are 3 different ways to package resources in to your .exe to make a standalone executable.
+
+#### 1. Icons and image files
+Add icons and image files to a folder in your solution by right clicking the folder and selecting "Add" -> "Existing item..." -> Set the file filter to all file types -> select your file.
+
+Once added to your project, right click on the file in the solution explorer, and select properties.  Set the "Build Action" to "Resource", and set the "Copy to Output Directory" to the "Do not copy" option.
+
+To reference this resource statically in .xaml, you can use "/ResourceFolderName/ResourceFileName.extension"
+
+You can also add this resource to your App.xaml and use it as a DynamicResource, where it can be retrieved using <DynamicResource ResourceName> in xaml, and be retrieved and set using App.Current.Resources["ResourceName"] in code.  App.xaml example for an .png: <ImageSource x:Key="myResourceKEy">../Resources/myResourceFile.png</ImageSource>
+
+#### 2. Text files and scripts
+Text files and scripts (.ps1, .bat, etc.) can be added to a folder in your solution explorer the same way as icons and images, also selecting "Resource" and "Do not copy" for the properties.
+
+Once added, open the Properties -> Resources.resx file, and drag the new file from the solution explorer in to the open area.  Note:  You can also use the "Add Resource" button here to import the file and add it at the same time, you will just need to move it to where you want in the solution explorer later.
+
+Added there, you can now write the script from the app using: File.WriteAllBytes(scriptPathToSave, Properties.Resources.scriptFileNameWithoutExtension);
+
+
+An alternative method that allows you to read files in to variables:
+Add the file as an "Embedded Resource", and don't add it to the Properties -> Resources.resx file.
+
+Access it in your app using something like:
+string[] linesOfTxtFile = (new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("Example_App.myTextFile.txt")).ReadToEnd()).Split('\n');
+
+#### 3. Assemblies and Nuget packages
+This applies to assemblies that you would like to embed in your app that get copied to your bin folder by default.  I generally use it for Nuget packages.  Note that when doing this, you will have to redo the steps every time you update an embedded Nuget package.
+
+Go to your References and find the packages that you want to embed, right click on them and view their properties to find the path that they are located.
+
+Right click on a designated Packages folder in your solution explorer, and "Add" -> "Existing item..." -> Navigate to and select the .dll
+
+Once added, right click the .dll and set the "Build Action" to "Embedded Resource", and set the "Copy to Output Directory" to "Do not Copy"
+
+Find the assembly in your References, and rset the "Copy Local" to "False" in its properties
+
+Follow the steps under the "Runtime_Assembly_Loading" to load embedded assemblies at runtime in your App.xaml.cs file
+
+
+<p>&nbsp;</p>
+
+
 ### TODO
 
 List of things I need to remember to pull and scrub from work projects to add here:
- - Standalone exe (bundling external assemblies, icons, and files)
  - Custom app (WPF) themes and colors by using DynamicResources and overriding styles
+ - Possible idea: Make a few basic timed popups and add to a new repo, maybe make a nuget package for them
+ - Clean up this readme and repo to make it easier to read and navigate
