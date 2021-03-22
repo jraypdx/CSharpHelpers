@@ -91,9 +91,17 @@ Follow the steps under the "Runtime_Assembly_Loading" to load embedded assemblie
 <p>&nbsp;</p>
 
 
+## Custom WPF Colors
+Contains an example on how to use custom colors for your app.  This example is built on the idea that there is a dropdown to change an "Accent" color in the app, and a way to toggle dark/light mode.  You can then use custom styling, setting backgrounds/foregrounds/etc of controls to use {DynamicResource Accent} or other colors that you choose.
+
+There is also a bit of code on how to swap icons that are being used for dark/light mode, assuming that you have a copy of each.  Ex. I had a copy of the inverted icons for use in dark mode in a folder named "Negatives" in the icon folder.  (Requires you to set up a ResourceDictionary for your icons, and add it to App.xaml)
+
+
+<p>&nbsp;</p>
+
+
 ### TODO
 
 List of things I need to remember to pull and scrub from work projects to add here:
- - Custom app (WPF) themes and colors by using DynamicResources and overriding styles
  - Possible idea: Make a few basic timed popups and add to a new repo, maybe make a nuget package for them
  - Clean up this readme and repo to make it easier to read and navigate
